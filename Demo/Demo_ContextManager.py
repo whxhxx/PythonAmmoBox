@@ -42,9 +42,12 @@ def get_file_with_lib(file_name):
         open_data.close()
 
 
-"""
-     TEST FUNCTIONS 
-"""
+
+#
+#── FUNCTIONS FOR TEST ─────────────────────────────────────────────────────────
+#
+
+
 def test_without_lib(file_dir):
     """ TEST 1"""
     with GetFile(file_dir) as target_file:

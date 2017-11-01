@@ -7,13 +7,17 @@ def worker(target,gap):
 
     #     n -= 1
 
-if __name__ == "__main__":
+
+def main():
     a = multiprocessing.Process(target=worker, args=('jerry',2))
     b = multiprocessing.Process(target=worker, args=('tom',4))
 
-    print 'done'
+    print ('done')
     a.start()
     b.start()
+
+if __name__ == "__main__":
+    main()
 
 
 

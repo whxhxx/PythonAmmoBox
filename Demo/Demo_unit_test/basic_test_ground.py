@@ -19,26 +19,30 @@ class TestInstance(unittest.TestCase):
         result = add(2,4)
         self.assertEqual(expected, result)
 
+    condition = 1 < 100
+    @unittest.skipIf( condition, "Wow I skipped it ")
     def test_minus(self):
         expected = 2
         result = minus(5,4)
         self.assertEqual(expected, result)
 
+
+
     # 2. envir setup functions call every time
     def setUp(self):
-        print ("do something befire test.Prepare envir")
+        print ("[ do something befire test.Prepare envir")
 
     def tearDown(self):
-        print ("do something after test.Clean up")
+        print ("do something after test.Clean up ]")
 
     # 3. envir setup functions call once
     @classmethod
     def setUpClass(cls):
-        print("\nthis setUp only call once")
+        print("\n- - this setUp only call once - -")
 
     @classmethod
     def tearDownClass(cls):
-        print("\nthis tearDown only call once")
+        print("\n- -this tearDown only call once - -")
 
 
 

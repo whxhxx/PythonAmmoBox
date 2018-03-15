@@ -5,6 +5,9 @@ import datetime
 DEFAULT_FORMAT = '%Y-%m-%d'
 
 
+
+
+
 def get_next_week_day(year, month, day):
     """
     to get the next working day(only Mon. Tues. Wed. Thur. Fri.) string
@@ -57,6 +60,13 @@ def main():
     """
     FOR TEST
     """
+
+
+    ## get today
+    today = datetime.date.today()
+    today.strftime("%m-%d-%y. %d %b %Y is a %A on the %d day of %B.")
+
+    # time
     out = datetime.datetime(2017, 11, 3, 21, 1, 20)
     print get_trade_day(m_now=out)
 

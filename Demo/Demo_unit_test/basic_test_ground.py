@@ -19,13 +19,21 @@ class TestInstance(unittest.TestCase):
         result = add(2,4)
         self.assertEqual(expected, result)
 
+
+
     condition = 1 < 100
+    # SKIP decorator
     @unittest.skipIf( condition, "Wow I skipped it ")
     def test_minus(self):
         expected = 2
         result = minus(5,4)
         self.assertEqual(expected, result)
 
+    def test_devide(self):
+        # raise
+        my_devidend = 2
+        my_devisor = 0
+        self.assertRaises(ZeroDivisionError, devide, my_devidend, my_devisor)
 
 
     # 2. envir setup functions call every time
